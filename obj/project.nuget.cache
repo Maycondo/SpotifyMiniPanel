@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "MBsNSNCTpPU985sz3l5PQbzvjhWnbcNNiGllbNwmyAQAGdZkwMQXTXxIxrmSD/TaxBJTb5pHp8Z8Kb9oHYE96g==",
+  "success": true,
+  "projectFilePath": "/home/maycon/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
+  "expectedPackageFiles": [
+    "/home/maycon/.nuget/packages/atksharp/3.22.25.13/atksharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/cairosharp/3.22.25.13/cairosharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/gdksharp/3.22.25.13/gdksharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/giosharp/3.22.25.13/giosharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/glibsharp/3.22.25.13/glibsharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/gtksharp/3.22.25.13/gtksharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/pangosharp/3.22.25.13/pangosharp.3.22.25.13.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "SpotifyMiniPanel depends on GtkSharp (>= 3.22.24.84) but GtkSharp 3.22.24.84 was not found. An approximate best match of GtkSharp 3.22.25.13 was resolved.",
+      "libraryId": "GtkSharp",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
