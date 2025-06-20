@@ -2,26 +2,27 @@
 using Gtk;
 using Gdk;
 
-
 class Program
 {
     [Obsolete]
     static void Main(string[] args)
     {
         Application.Init();
-        var win = new MainWindow();
-        SettingsButton settingsBtn = new SettingsButton();
-        win.Add(settingsBtn);
-        win.ShowAll();
+        Fixed layout = new Fixed();
 
-        // Posição da janela no canto inferior direito
-        var screen = Display.Default.DefaultScreen;
-        int width = 300;
-        int height = 100;
-        win.Resize(width, height);
-        win.Move(screen.Width - width - 10, screen.Height - height - 40);
+        var win = new MainWindow(); // Cria a janela principal
+        var settingsButton = new SettingsButton(); // Cria o botão de configuraçõeso
+        layout.Put(settingsButton, 350, 5); // ajuste posição conforme largura da janela
 
-        // Interface
+        settingsButton.Clicked += (sender, e) =>
+        {
+            // Ação do botão de configurações
+            Console.WriteLine("Botão de configurações clicado!");
+            // Aqui você pode abrir uma nova janela ou exibir um diálogo de configurações
+        };
+    
+
+        // VBox com conteúdo da interface
         VBox box = new VBox();
         Label label = new Label();
         label.Markup = "<span foreground='white' font='12'>🎵 Nenhuma música tocando</span>";
@@ -35,8 +36,19 @@ class Program
         box.PackStart(label, true, true, 5);
         box.PackStart(playBtn, false, false, 5);
 
-        win.Add(box);
+        // Adiciona VBox ao layout, posicionando
+        layout.Put(box, 10, 50); // (x, y)
+
+        // Adiciona o layout completo à janela
+        win.Add(layout);
         win.ShowAll();
+
+        // Posição da janela no canto inferior direito da tela
+        var screen = Display.Default.DefaultScreen;
+        int width = 300;
+        int height = 100;
+        win.Resize(width, height);
+        win.Move(screen.Width - width - 10, screen.Height - height - 40);
 
         win.DeleteEvent += (o, e) => Application.Quit();
         Application.Run();

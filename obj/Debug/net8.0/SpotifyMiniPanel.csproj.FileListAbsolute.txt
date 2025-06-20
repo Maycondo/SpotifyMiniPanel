@@ -21,3 +21,4 @@
 /home/maycon/Documentos/SpotifyMiniPanel/obj/Debug/net8.0/SpotifyMiniPanel.pdb
 /home/maycon/Documentos/SpotifyMiniPanel/obj/Debug/net8.0/SpotifyMiniPanel.genruntimeconfig.cache
 /home/maycon/Documentos/SpotifyMiniPanel/obj/Debug/net8.0/ref/SpotifyMiniPanel.dll
+/home/maycon/Documentos/SpotifyMiniPanel/obj/Debug/net8.0/SpotifyMiniPanel.sourcelink.json
