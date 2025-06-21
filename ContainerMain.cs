@@ -4,10 +4,11 @@ using Gdk;
 
 
 
-class MainWindow : Gtk.Window
+class ContainerMain : Gtk.Window
 {
-    public MainWindow() : base("Spotify Mini Panel")
+    public ContainerMain() : base("Spotify Mini")
     {
+        
         SetDefaultSize(350, 150);
         KeepAbove = true;
         Decorated = true; // Sem borda

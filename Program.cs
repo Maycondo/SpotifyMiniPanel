@@ -10,30 +10,35 @@ class Program
         Application.Init();
         Fixed layout = new Fixed();
 
-        var win = new MainWindow(); // Cria a janela principal
+        var win = new ContainerMain(); // Cria a janela principal
         var settingsButton = new SettingsButton(); // Cria o botão de configuraçõeso
         layout.Put(settingsButton, 350, 5); // ajuste posição conforme largura da janela
 
+        // Ação do botão de configurações
         settingsButton.Clicked += (sender, e) =>
         {
-            // Ação do botão de configurações
-            Console.WriteLine("Botão de configurações clicado!");
-            // Aqui você pode abrir uma nova janela ou exibir um diálogo de configurações
+            var settingsWindow = new ContainerSettings(); // Cria a janela de configurações
+            settingsWindow.ShowAll(); // Exibe a janela de configurações
+    
         };
     
 
         // VBox com conteúdo da interface
         VBox box = new VBox();
-        Label label = new Label();
-        label.Markup = "<span foreground='white' font='12'>🎵 Nenhuma música tocando</span>";
+        Label iconLabel = new Label("\uf04b"); // Unicode do ícone "play"
+        iconLabel.Markup = "<span foreground='white' font='12'> 🎵 Nenhuma música tocando</span>";
+        iconLabel.ModifyFont(Pango.FontDescription.FromString("Font Awesome 16"));
 
-        Button playBtn = new Button("⏯️");
+
+        Button playBtn = new Button("▶️ Tocar Música de Exemplo");
         playBtn.Clicked += (sender, e) =>
         {
-            label.Markup = "<span foreground='lightgreen' font='12'>▶️ Tocando música de exemplo</span>";
+            iconLabel.Markup = "<span foreground='lightgreen' font='12'>▶️ Tocando música de exemplo</span>";
         };
 
-        box.PackStart(label, true, true, 5);
+ 
+
+        box.PackStart(iconLabel, true, true, 5);
         box.PackStart(playBtn, false, false, 5);
 
         // Adiciona VBox ao layout, posicionando

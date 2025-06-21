@@ -8,7 +8,7 @@ public class SettingsButton : Button
 {
     public SettingsButton() : base("⚙️")
     {
-        Name = "settings-button";
+        // Configurações do botão
         SetSizeRequest(20, 20);
         CanFocus = false;
         Relief = ReliefStyle.None;
