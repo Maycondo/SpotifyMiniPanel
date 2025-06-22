@@ -22,7 +22,6 @@ class Program
     
         };
     
-
         // VBox com conteúdo da interface
         VBox box = new VBox();
         Label iconLabel = new Label("\uf04b"); // Unicode do ícone "play"
@@ -36,7 +35,6 @@ class Program
             iconLabel.Markup = "<span foreground='lightgreen' font='12'>▶️ Tocando música de exemplo</span>";
         };
 
- 
 
         box.PackStart(iconLabel, true, true, 5);
         box.PackStart(playBtn, false, false, 5);
