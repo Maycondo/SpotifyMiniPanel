@@ -6,10 +6,24 @@ using System.Collections.Generic;
 
 public class SettingsButton : Button
 {
-    public SettingsButton() : base("⚙️")
+
+    private Label iconLabel;
+    public string Icon { get; set; } = "\uf013"; // Unicode do ícone "settings"
+    public SettingsButton() : base()
     {
+
+        iconLabel = new Label(Icon)
+        {
+            Text = Icon,
+            UseMarkup = true,
+            Xalign = 0.5f, // Centraliza horizontalmente
+            Yalign = 0.5f // Centraliza verticalmente
+        };
+
+        Add(iconLabel);
+
         // Configurações do botão
-        SetSizeRequest(20, 20);
+        SetSizeRequest(35, 35);
         CanFocus = false;
         Relief = ReliefStyle.None;
 
@@ -17,10 +31,10 @@ public class SettingsButton : Button
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
             button {
-                    font-size: 16px;
+                    font-size: 12px;
                     border: none;
                     padding: 1px;
-                    border-radius: 5px;
+                    border-radius: 50%;
                     background: transparent;
                     color: white;
                 }");
