@@ -12,7 +12,6 @@ class ContainerMain : Gtk.Window
         SetDefaultSize(350, 150);
         KeepAbove = true;
         Decorated = true; // Sem borda
-        BorderWidth = 0; // Espaçamento interno
         IconName = "spotify"; // Ícone do Spotify
         WindowPosition = Gtk.WindowPosition.Center; // Centraliza a janela
         Resizable = false;
