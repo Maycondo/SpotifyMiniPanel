@@ -12,6 +12,7 @@ class NextSongButton : Button
 
         iconLabel = new Label(Icon)
         {
+            Name = "nextSongIcon",
             Text = Icon,
             UseMarkup = true,
             Xalign = 0.5f, // Centraliza horizontalmente
@@ -21,18 +22,19 @@ class NextSongButton : Button
         Add(iconLabel);
 
         // Configurações do botão
-        SetSizeRequest(50, 50);
+        SetSizeRequest(30, 30);
         CanFocus = false;
-        Relief = ReliefStyle.Normal;
+        Relief = ReliefStyle.None;
 
         // Estilo do botão 
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
-            button {
+            #nextSongIcon {
                 font-size: 18px;
                 border: none;
                 padding: 5px;
                 border-radius: 50%;
+                background-color: transparent;
                 color: white; }"
         );
         Gtk.StyleContext.AddProviderForScreen(

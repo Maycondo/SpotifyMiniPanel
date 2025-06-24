@@ -14,6 +14,7 @@ public class SettingsButton : Button
 
         iconLabel = new Label(Icon)
         {
+            Name = "settingsIcon",
             Text = Icon,
             UseMarkup = true,
             Xalign = 0.5f, // Centraliza horizontalmente
@@ -30,12 +31,12 @@ public class SettingsButton : Button
         // Estilo do botão
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
-            button {
-                    font-size: 12px;
+            #settingsIcon {
+                    font-size: 18px;
                     border: none;
                     padding: 1px;
                     border-radius: 50%;
-                    background: transparent;
+                    background-color: transparent;
                     color: white;
                 }");
         StyleContext.AddProviderForScreen(

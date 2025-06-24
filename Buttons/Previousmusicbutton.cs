@@ -13,6 +13,7 @@ class PreviosMusicButton : Button
     {
         iconLabel = new Label(Icon)
         {
+            Name = "previousMusicIcon",
             Text = Icon,
             UseMarkup = true,
             Xalign = 0.5f, // Centraliza horizontalmente
@@ -22,18 +23,19 @@ class PreviosMusicButton : Button
         Add(iconLabel);
 
         // Configurações do botão
-        SetSizeRequest(50, 50);
+        SetSizeRequest(30, 30);
         CanFocus = false;
-        Relief = ReliefStyle.Normal;
+        Relief = ReliefStyle.None;
 
         // Estilo do botão
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
-            button {
+            #previousMusicIcon {
                 font-size: 18px;
                 border: none;
                 padding: 5px;
                 border-radius: 50%;
+                background-color: transparent;
                 color: white; 
                 }");
         Gtk.StyleContext.AddProviderForScreen(
