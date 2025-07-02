@@ -30,6 +30,7 @@ class PlayAndPauseButton : Button
         CanFocus = false;
         Relief = ReliefStyle.None;
 
+
         // Estilo do botão
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
@@ -41,6 +42,9 @@ class PlayAndPauseButton : Button
                 border-radius: 50%;
                 color:rgb(0, 0, 0);
                 background-color: white;
+            }
+            #playPauseIcon:hover {
+                border-radius: 50%;
             }
         ");
 

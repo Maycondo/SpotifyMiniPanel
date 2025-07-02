@@ -30,7 +30,7 @@ class NextSongButton : Button
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
             #nextSongIcon {
-                font-size: 18px;
+                font-size: 20px;
                 border: none;
                 padding: 5px;
                 border-radius: 50%;
