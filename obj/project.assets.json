@@ -179,7 +179,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "GtkSharp >= 3.22.24.84"
+      "GtkSharp >= 3.22.25.13"
     ]
   },
   "packageFolders": {
@@ -221,7 +221,7 @@
         "dependencies": {
           "GtkSharp": {
             "target": "Package",
-            "version": "[3.22.24.84, )"
+            "version": "[3.22.25.13, )"
           }
         },
         "imports": [
@@ -243,17 +243,5 @@
         "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "SpotifyMiniPanel depends on GtkSharp (>= 3.22.24.84) but GtkSharp 3.22.24.84 was not found. An approximate best match of GtkSharp 3.22.25.13 was resolved.",
-      "libraryId": "GtkSharp",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

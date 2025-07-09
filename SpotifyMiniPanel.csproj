@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GtkSharp" Version="3.22.24.84" />
+    <PackageReference Include="GtkSharp" Version="3.22.25.13" />
   </ItemGroup>
 
 </Project>

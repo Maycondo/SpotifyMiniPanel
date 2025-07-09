@@ -26,7 +26,7 @@ class PlayAndPauseButton : Button
         Add(iconLabel);
 
         // Configurações do botão
-        SetSizeRequest(57, 50);
+        SetSizeRequest(60, 50);
         CanFocus = false;
         Relief = ReliefStyle.None;
 

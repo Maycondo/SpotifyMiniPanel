@@ -40,7 +40,7 @@
           "dependencies": {
             "GtkSharp": {
               "target": "Package",
-              "version": "[3.22.24.84, )"
+              "version": "[3.22.25.13, )"
             }
           },
           "imports": [

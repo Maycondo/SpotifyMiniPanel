@@ -1,9 +1,9 @@
-﻿    using System;
-    using Gtk;
-    using Gdk;
+﻿using System;
+using Gtk;
+using Gdk;
 
-    class Program
-    {
+class Program
+{
         static Gtk.Window? settingsWindow = null; // Variável para armazenar a janela de configurações
 
         [Obsolete]
@@ -11,13 +11,24 @@
         {
             Application.Init();
             Fixed layout = new Fixed();
+            
+
+
+            
 
             // Cria a janela principal e os botões
-            var win = new ContainerMain(); 
+            var win = new ContainerMain();
+            var progressBar = new ProgressBar();
+
             var settingsButton = new SettingsButton(); 
             var nextSongButton = new NextSongButton(); 
             var playAndPauseButton = new PlayAndPauseButton(); 
             var previousMusicButton = new PreviosMusicButton();
+            
+            
+            var alignmentProgressBox = new Alignment(0.5f, 0.3f, 0, 0);
+            alignmentProgressBox.Add(progressBar);
+            
             
             // Cria HBox com espaçamento entre os botões
             HBox musicControlBox = new HBox(true, 10);
@@ -25,12 +36,13 @@
             musicControlBox.PackStart(playAndPauseButton, false, false, 0);
             musicControlBox.PackStart(nextSongButton, false, false, 0);
 
-           // Centraliza horizontalmente com Alignment
+            // Centraliza horizontalmente com Alignment
             var alignment = new Alignment(0.5f, 0.5f, 0, 0);
             alignment.Add(musicControlBox);
 
             // Adiciona ao layout
-            layout.Put(alignment, 92, 110); // Ajuste de posição (x, y)
+            layout.Put(alignmentProgressBox, 120, 90);
+            layout.Put(alignment, 92, 100); // Ajuste de posição (x, y)
             layout.Put(settingsButton, 348, 5); 
 
             // Ação do botão de configurações
@@ -77,4 +89,4 @@
             win.DeleteEvent += (o, e) => Application.Quit();
             Application.Run();
         }
-    }
+}
