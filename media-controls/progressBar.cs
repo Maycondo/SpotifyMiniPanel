@@ -12,7 +12,7 @@ public class PlayerWindow : Window  // Novo nome aqui
 
         progressBar = new ProgressBar();
         progressBar.Name = "customProgressBar";  // Nome para CSS
-        progressBar.SetSizeRequest(350, 12);
+
 
         // Estilo do botão
         var cssProvider = new CssProvider();
