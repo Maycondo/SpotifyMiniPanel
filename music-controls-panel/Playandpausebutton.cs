@@ -41,7 +41,7 @@ class PlayAndPauseButton : Button
                 padding: 5px;
                 border-radius: 50%;
                 color:rgb(0, 0, 0);
-                background-color: white;
+                background-color: red;
             }
             #playPauseIcon:hover {
                 border-radius: 50%;

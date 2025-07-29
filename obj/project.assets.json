@@ -183,19 +183,19 @@
     ]
   },
   "packageFolders": {
-    "/home/maycon/.nuget/packages/": {}
+    "/home/maycom/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/maycon/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
+      "projectUniqueName": "/home/maycom/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
       "projectName": "SpotifyMiniPanel",
-      "projectPath": "/home/maycon/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
-      "packagesPath": "/home/maycon/.nuget/packages/",
-      "outputPath": "/home/maycon/Documentos/SpotifyMiniPanel/obj/",
+      "projectPath": "/home/maycom/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
+      "packagesPath": "/home/maycom/.nuget/packages/",
+      "outputPath": "/home/maycom/Documentos/SpotifyMiniPanel/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/maycon/.nuget/NuGet/NuGet.Config"
+        "/home/maycom/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -213,6 +213,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -240,7 +245,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/maycom/.dotnet/sdk/8.0.412/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
