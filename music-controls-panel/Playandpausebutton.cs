@@ -26,7 +26,7 @@ class PlayAndPauseButton : Button
         Add(iconLabel);
 
         // Configurações do botão
-        SetSizeRequest(40, 35);
+        SetSizeRequest(55, 45);
         CanFocus = false;
         Relief = ReliefStyle.None;
 
@@ -36,12 +36,12 @@ class PlayAndPauseButton : Button
         cssProvider.LoadFromData(@"
             #playPauseIcon {
                 font-family: 'FontAwesome';
-                font-size: 20px; /* Tamanho do ícone */
+                font-size: 15px; /* Tamanho do ícone */
                 border: none;
-                padding: 5px;
+                padding: 8px;
                 border-radius: 50%;
                 color:rgb(0, 0, 0);
-                background-color: red;
+                background-color: white;
             }
             #playPauseIcon:hover {
                 border-radius: 50%;

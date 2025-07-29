@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BuavumeUnDI=",
+  "dgSpecHash": "sgOptKbUsQ4=",
   "success": true,
   "projectFilePath": "/home/maycom/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,9 @@
     "/home/maycom/.nuget/packages/giosharp/3.22.25.13/giosharp.3.22.25.13.nupkg.sha512",
     "/home/maycom/.nuget/packages/glibsharp/3.22.25.13/glibsharp.3.22.25.13.nupkg.sha512",
     "/home/maycom/.nuget/packages/gtksharp/3.22.25.13/gtksharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/pangosharp/3.22.25.13/pangosharp.3.22.25.13.nupkg.sha512"
+    "/home/maycom/.nuget/packages/pangosharp/3.22.25.13/pangosharp.3.22.25.13.nupkg.sha512",
+    "/home/maycom/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.18/microsoft.aspnetcore.app.ref.8.0.18.nupkg.sha512",
+    "/home/maycom/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.18/microsoft.netcore.app.host.linux-x64.8.0.18.nupkg.sha512"
   ],
   "logs": []
 }

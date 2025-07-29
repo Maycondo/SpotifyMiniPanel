@@ -9,7 +9,7 @@ class ContainerMain : Gtk.Window
     public ContainerMain() : base("Spotify Mini")
     {
         
-        SetDefaultSize(350, 125);
+        SetDefaultSize(400, 160);
         KeepAbove = true;
         Decorated = true; 
         IconName = "spotify"; // Ícone do Spotify

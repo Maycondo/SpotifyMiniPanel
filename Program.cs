@@ -23,7 +23,7 @@ class Program
         var previousMusicButton = new PreviosMusicButton();
 
         // Caixa vertical geral
-        VBox mainBox = new VBox(false, 10);
+        VBox mainBox = new VBox(false, 20);
 
         // Top bar com botão de configurações à direita
         HBox topBar = new HBox();
@@ -44,7 +44,7 @@ class Program
         // Caixa de controle de música (centralizada)
         HBox musicControlBox = new HBox(true, 10);
         musicControlBox.PackStart(previousMusicButton, false, false, 0);
-        musicControlBox.PackStart(playAndPauseButton, false, false, 0);
+        musicControlBox.PackStart(playAndPauseButton, false, false, 10);
         musicControlBox.PackStart(nextSongButton, false, false, 0);
 
         HBox musicBoxAlign = new HBox();
@@ -82,7 +82,7 @@ class Program
         // Posição da janela
         var screen = Display.Default.DefaultScreen;
         int width = 400;
-        int height = 130;
+        int height = 160;
         win.Resize(width, height);
         win.Move(screen.Width - width - 10, screen.Height - height - 40);
 
