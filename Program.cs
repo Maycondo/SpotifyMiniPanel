@@ -23,16 +23,16 @@ class Program
         var previousMusicButton = new PreviosMusicButton();
 
         // Caixa vertical geral
-        VBox mainBox = new VBox(false, 20);
+        VBox mainBox = new VBox(false, 30);
 
         // Top bar com botão de configurações à direita
         HBox topBar = new HBox();
         topBar.PackEnd(settingsButton, false, false, 0);
         mainBox.PackStart(topBar, false, false, 0);
 
+
         // Caixa para a progress bar
         HBox progressBox = new HBox();
-        progressBox.BorderWidth = 10;
         progressBox.PackStart(new Label(), true, true, 0); // espaço à esquerda
         progressBar.WidthRequest = 260;  
         progressBar.HeightRequest = 2;
