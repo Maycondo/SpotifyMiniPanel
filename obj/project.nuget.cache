@@ -1,18 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "sgOptKbUsQ4=",
+  "dgSpecHash": "+z02Nri6luU=",
   "success": true,
-  "projectFilePath": "/home/maycom/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
+  "projectFilePath": "/home/maycon/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
   "expectedPackageFiles": [
-    "/home/maycom/.nuget/packages/atksharp/3.22.25.13/atksharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/cairosharp/3.22.25.13/cairosharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/gdksharp/3.22.25.13/gdksharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/giosharp/3.22.25.13/giosharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/glibsharp/3.22.25.13/glibsharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/gtksharp/3.22.25.13/gtksharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/pangosharp/3.22.25.13/pangosharp.3.22.25.13.nupkg.sha512",
-    "/home/maycom/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.18/microsoft.aspnetcore.app.ref.8.0.18.nupkg.sha512",
-    "/home/maycom/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.18/microsoft.netcore.app.host.linux-x64.8.0.18.nupkg.sha512"
+    "/home/maycon/.nuget/packages/atksharp/3.22.25.13/atksharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/cairosharp/3.22.25.13/cairosharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/gdksharp/3.22.25.13/gdksharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/giosharp/3.22.25.13/giosharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/glibsharp/3.22.25.13/glibsharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/gtksharp/3.22.25.13/gtksharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/pangosharp/3.22.25.13/pangosharp.3.22.25.13.nupkg.sha512",
+    "/home/maycon/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/maycon/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
   ],
   "logs": []
 }

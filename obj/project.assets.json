@@ -183,19 +183,19 @@
     ]
   },
   "packageFolders": {
-    "/home/maycom/.nuget/packages/": {}
+    "/home/maycon/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/maycom/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
+      "projectUniqueName": "/home/maycon/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
       "projectName": "SpotifyMiniPanel",
-      "projectPath": "/home/maycom/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
-      "packagesPath": "/home/maycom/.nuget/packages/",
-      "outputPath": "/home/maycom/Documentos/SpotifyMiniPanel/obj/",
+      "projectPath": "/home/maycon/Documentos/SpotifyMiniPanel/SpotifyMiniPanel.csproj",
+      "packagesPath": "/home/maycon/.nuget/packages/",
+      "outputPath": "/home/maycon/Documentos/SpotifyMiniPanel/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/maycom/.nuget/NuGet/NuGet.Config"
+        "/home/maycon/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -219,7 +219,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -244,11 +244,11 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.18, 8.0.18]"
+            "version": "[8.0.22, 8.0.22]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[8.0.18, 8.0.18]"
+            "version": "[8.0.22, 8.0.22]"
           }
         ],
         "frameworkReferences": {
@@ -256,7 +256,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
