@@ -38,7 +38,7 @@ class PlayAndPauseButton : Button
                 font-family: 'FontAwesome';
                 font-size: 15px; /* Tamanho do ícone */
                 border: none;
-                padding: 8px;
+                padding: 15px;
                 border-radius: 50%;
                 color:rgb(0, 0, 0);
                 background-color: white;
