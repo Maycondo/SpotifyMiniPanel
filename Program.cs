@@ -11,51 +11,61 @@ class Program
     {
         Application.Init();
 
-        // Janela principal
         var win = new ContainerMain();
         win.Resizable = false;
 
-        // Criação de widgets
+        // Widgets
         var progressBar = new ProgressBar();
         var settingsButton = new SettingsButton();
         var nextSongButton = new NextSongButton();
         var playAndPauseButton = new PlayAndPauseButton();
         var previousMusicButton = new PreviosMusicButton();
 
-        // Caixa vertical geral
-        VBox mainBox = new VBox(false, 30);
+        // Caixa principal
+        VBox mainBox = new VBox(false, 10);
 
-        // Top bar com botão de configurações à direita
+        // Top bar (em cima)
         HBox topBar = new HBox();
-        topBar.PackEnd(settingsButton, false, false, 0);
+        topBar.PackEnd(settingsButton, false, false, 10);
         mainBox.PackStart(topBar, false, false, 0);
 
+        // Espaço que empurra tudo para baixo
+        mainBox.PackStart(new Label(), true, true, 0);
 
-        // Caixa para a progress bar
-        HBox progressBox = new HBox();
-        progressBox.PackStart(new Label(), true, true, 0); // espaço à esquerda
-        progressBar.WidthRequest = 260;  
+        // Área da música (embaixo)
+        VBox musicArea = new VBox(false, 6);
+
+        // Barra de progresso
+        progressBar.WidthRequest = 270;
         progressBar.HeightRequest = 2;
-        progressBox.PackStart(progressBar, false, false, 0); // não expande
-        progressBox.PackStart(new Label(), true, true, 0); // espaço à direita
-        mainBox.PackStart(progressBox, false, false, 0);
 
+        HBox progressBox = new HBox();
+        progressBox.PackStart(new Label(), true, true, 0);
+        progressBox.PackStart(progressBar, false, false, 0);
+        progressBox.PackStart(new Label(), true, true, 0);
 
-        // Caixa de controle de música (centralizada)
-        HBox musicControlBox = new HBox(true, 10);
-        musicControlBox.PackStart(previousMusicButton, false, false, 0);
-        musicControlBox.PackStart(playAndPauseButton, false, false, 10);
-        musicControlBox.PackStart(nextSongButton, false, false, 0);
+        // Botões
+        HBox musicControl = new HBox(false, 14);
+        musicControl.PackStart(previousMusicButton, false, false, 0);
+        musicControl.PackStart(playAndPauseButton, false, false, 0);
+        musicControl.PackStart(nextSongButton, false, false, 0);
 
-        HBox musicBoxAlign = new HBox();
-        musicBoxAlign.PackStart(new Label(), true, true, 0); // Espaço à esquerda
-        musicBoxAlign.PackStart(musicControlBox, false, false, 0);
-        musicBoxAlign.PackStart(new Label(), true, true, 0); // Espaço à direita
+        // Centralizar botões
+        HBox centerButtons = new HBox();
+        centerButtons.PackStart(new Label(), true, true, 0);
+        centerButtons.PackStart(musicControl, false, false, 0);
+        centerButtons.PackStart(new Label(), true, true, 0);
 
-        mainBox.PackStart(musicBoxAlign, false, false, 0);
+        // Montagem final da área de música
+        musicArea.PackStart(progressBox, false, false, 0);
+        musicArea.PackStart(centerButtons, false, false, 0);
 
-        // Ação botão de configurações
-        settingsButton.Clicked += (sender, e) =>
+        // Margem inferior
+        musicArea.MarginBottom = 1;
+
+        mainBox.PackStart(musicArea, false, false, 0);
+
+        settingsButton.Clicked += (s, e) =>
         {
             if (settingsWindow == null || !settingsWindow.IsVisible)
             {
@@ -69,22 +79,17 @@ class Program
             }
         };
 
-        // Ação botão play/pause
-        playAndPauseButton.Clicked += (sender, e) =>
+        playAndPauseButton.Clicked += (s, e) =>
         {
             playAndPauseButton.TogglePlayPause();
         };
 
-        // Finaliza
         win.Add(mainBox);
         win.ShowAll();
 
-        // Posição da janela
         var screen = Display.Default.DefaultScreen;
-        int width = 400;
-        int height = 160;
-        win.Resize(width, height);
-        win.Move(screen.Width - width - 10, screen.Height - height - 40);
+        win.Resize(400, 160);
+        win.Move(screen.Width - 410, screen.Height - 200);
 
         win.DeleteEvent += (o, e) => Application.Quit();
         Application.Run();
