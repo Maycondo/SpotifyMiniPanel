@@ -15,7 +15,7 @@ public class NameMusic : Box
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
             #customLabel {
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: bold;
                 color: #ffffff;
             }

@@ -8,23 +8,23 @@ public class ImagemMusic : Box
         eventBox.Name = "musicFrame";
 
         var image = new Image("caminho/para/imagem.png");
-        image.SetSizeRequest(80, 80);
+        image.SetSizeRequest(70, 70);
 
         eventBox.Add(image);
         PackStart(eventBox, false, false, 0);
 
-        var css = new CssProvider();
-        css.LoadFromData(@"
+        var cssProvider = new CssProvider();
+        cssProvider.LoadFromData(@"
             #musicFrame {
                 border-radius: 8px;
-                border: 10px solid #1DB954;
+                border: 1px solid #1DB954;
                 background-color: #121212;
             }
         ");
 
         StyleContext.AddProviderForScreen(
             Gdk.Screen.Default,
-            css,
+            cssProvider,
             StyleProviderPriority.Application
         );
 
