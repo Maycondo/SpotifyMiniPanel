@@ -15,6 +15,8 @@ class Program
         win.Resizable = false;
 
         // Widgets
+        var imagemMusic = new ImagemMusic();
+        var nameMusic = new NameMusic();
         var progressBar = new ProgressBar();
         var settingsButton = new SettingsButton();
         var nextSongButton = new NextSongButton();
@@ -28,6 +30,11 @@ class Program
         HBox topBar = new HBox();
         topBar.PackEnd(settingsButton, false, false, 10);
         mainBox.PackStart(topBar, false, false, 0);
+
+        VBox imageNameBox = new VBox(false, 10);
+        imageNameBox.PackStart(imagemMusic, false, false, 0);
+        imageNameBox.PackStart(nameMusic, false, false, 0);
+
 
         // Espaço que empurra tudo para baixo
         mainBox.PackStart(new Label(), true, true, 0);

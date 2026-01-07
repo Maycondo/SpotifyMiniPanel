@@ -1,38 +1,34 @@
-using System;
 using Gtk;
 
-public class ImagemMusic : Window
+public class ImagemMusic : Box
 {
-    public ImagemMusic() : base("Imagem Music")
+    public ImagemMusic() : base(Orientation.Vertical, 0)
     {
-        SetDefaultSize(300, 300);
-        SetPosition(Window);
+        var eventBox = new EventBox();
+        eventBox.Name = "musicFrame";
 
-        var imagem = new Imagem("caminho/para/sua/imagem.png"); // Substitua pelo caminho da sua imagem
-        imagem.Name = "customImage";
+        var image = new Image("caminho/para/imagem.png");
+        image.SetSizeRequest(80, 80);
 
-        // Container (obrigatório no GTK)
-        var box = new Box(Orientation.Vertical, 10);
-        box.Margin = 15;
+        eventBox.Add(image);
+        PackStart(eventBox, false, false, 0);
 
-        box.PackStart(imagem, false, false, 0);
-
-        add(box);   
-
-        // CSS
-        var cssProvider = new CssProvider();    
-        cssProvider.LoadFromData(@"
-            #customImage {
-                border-radius: 15px;
-                border: 2px solid #1DB954;
-            }");       
+        var css = new CssProvider();
+        css.LoadFromData(@"
+            #musicFrame {
+                border-radius: 8px;
+                border: 10px solid #1DB954;
+                background-color: #121212;
+            }
+        ");
 
         StyleContext.AddProviderForScreen(
             Gdk.Screen.Default,
-            cssProvider,
+            css,
             StyleProviderPriority.Application
         );
 
+
         ShowAll();
-    }       
+    }
 }
