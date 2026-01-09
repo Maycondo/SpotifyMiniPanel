@@ -80,8 +80,10 @@
             // Margem inferior
             musicArea.MarginBottom = 1;
 
+            // Adiciona a área de música à caixa principal
             mainBox.PackStart(musicArea, false, false, 0);
 
+            // Eventos dos botões
             settingsButton.Clicked += (s, e) =>
             {
                 if (settingsWindow == null || !settingsWindow.IsVisible)
