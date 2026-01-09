@@ -11,7 +11,7 @@ public class NameMusic : Box
         labelMusic.Xalign = 0;
 
         PackStart(labelMusic, false, false, 0);
-
+    
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
             #customLabel {
