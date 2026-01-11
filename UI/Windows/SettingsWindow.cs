@@ -5,6 +5,8 @@ using Gdk;
 
 public class ContainerSettings : Gtk.Window
 {
+            
+
     public ContainerSettings() : base("Spotify Mini Settings")
     {
         
@@ -23,5 +25,7 @@ public class ContainerSettings : Gtk.Window
             cssProvider,
             Gtk.StyleProviderPriority.Application
         );
+
+    
     }
 }
