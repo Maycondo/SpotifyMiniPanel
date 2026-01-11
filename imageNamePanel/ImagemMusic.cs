@@ -17,8 +17,9 @@ public class ImagemMusic : Box
         cssProvider.LoadFromData(@"
             #musicFrame {
                 border-radius: 8px;
-                border: 1px solid #1DB954;
                 background-color: #121212;
+                background-clip: padding-box;   
+                background-size: cover;
             }
         ");
 

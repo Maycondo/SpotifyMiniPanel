@@ -18,7 +18,7 @@ class ContainerMain : Gtk.Window
 
         // Cor de fundo (preto) usando CSS
         var cssProvider = new CssProvider();
-        cssProvider.LoadFromData("window { background-color: #000000; padding: 0; margin: 0; }");
+        cssProvider.LoadFromData("window { background-color: #18181A; padding: 0; margin: 0; }");
         StyleContext.AddProviderForScreen(
             Gdk.Screen.Default,
             cssProvider,    

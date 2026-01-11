@@ -26,7 +26,7 @@ class PlayAndPauseButton : Button
         Add(iconLabel);
 
         // Configurações do botão
-        SetSizeRequest(35, 35);
+        SetSizeRequest(45, 40);
         CanFocus = false;
         Relief = ReliefStyle.None;
 
@@ -38,7 +38,7 @@ class PlayAndPauseButton : Button
                 font-family: 'FontAwesome';
                 font-size: 12px; /* Tamanho do ícone */
                 border: none;
-                padding: 13px;
+                padding: 14px;
                 border-radius: 50%;
                 color:rgb(0, 0, 0);
                 background-color: white;
