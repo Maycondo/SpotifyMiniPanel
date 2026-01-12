@@ -1,31 +1,31 @@
-using System;
 using Gtk;
-using Gdk;
 
-
-public class ContainerSettings : Gtk.Window
+namespace SpotifyMiniPanel.UI.Windows
 {
-            
-
-    public ContainerSettings() : base("Spotify Mini Settings")
+    public class SettingsWindow : Window
     {
-        
-        SetDefaultSize(700, 600);
-        KeepAbove = true;
-        Decorated = true;
-        BorderWidth = 0;
-        SetPosition(WindowPosition.Center);
-        Resizable = false;
+        private MainWindow mainWindow;
 
-        // Cor de fundo (preto) usando CSS 
-        var cssProvider = new CssProvider();
-        cssProvider.LoadFromData("window {background-color: #18181A; padding: 0; margin: 0;}");
-        StyleContext.AddProviderForScreen(
-            Gdk.Screen.Default,
-            cssProvider,
-            Gtk.StyleProviderPriority.Application
-        );
+        // ✅ CONSTRUTOR (tem que estar AQUI dentro da classe)
+        public SettingsWindow(MainWindow mainWindow) : base("Settings")
+        {
+            this.mainWindow = mainWindow;
 
-    
+            SetDefaultSize(400, 300);
+            SetPosition(WindowPosition.Center);
+            Resizable = false;
+
+            // Container principal
+            var mainBox = new Box(Orientation.Vertical, 12);
+            mainBox.Margin = 20;
+            Add(mainBox);
+
+            var title = new Label("Configurações");
+            title.Halign = Align.Start;
+
+            mainBox.PackStart(title, false, false, 0);
+
+            ShowAll();
+        }
     }
 }

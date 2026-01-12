@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpotifyMiniPanel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bceccb563fc6c176d9eb8471c8f3e7f557ae2de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5de3532445362b6331556224628373cf17d7caea")]
 [assembly: System.Reflection.AssemblyProductAttribute("SpotifyMiniPanel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpotifyMiniPanel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

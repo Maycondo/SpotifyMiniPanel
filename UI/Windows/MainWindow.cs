@@ -1,33 +1,29 @@
-using System;
 using Gtk;
-using Gdk;
 
-
-
-class ContainerMain : Gtk.Window
+namespace SpotifyMiniPanel.UI.Windows
 {
-    public ContainerMain() : base("Spotify Mini")
+    public class MainWindow : Window
     {
-        
-        SetDefaultSize(400, 160);
-        KeepAbove = true;
-        Decorated = true; 
-        IconName = "spotify"; // Ícone do Spotify
-        WindowPosition = Gtk.WindowPosition.Center; // Centraliza a janela
-        Resizable = false;
+        public MainWindow() : base("Spotify Mini Panel")
+        {
+            SetDefaultSize(400, 160);
+            KeepAbove = true;
+            Decorated = true;
+            IconName = "spotify";
+            WindowPosition = WindowPosition.Center;
+            Resizable = false;
 
-        // Cor de fundo (preto) usando CSS
-        var cssProvider = new CssProvider();
-        cssProvider.LoadFromData("window { background-color: #18181A; padding: 0; margin: 0; }");
-        StyleContext.AddProviderForScreen(
-            Gdk.Screen.Default,
-            cssProvider,    
-            Gtk.StyleProviderPriority.Application
-        );
+            // ✅ DECLARAÇÃO CORRETA
+            var cssProvider = new CssProvider();
+            cssProvider.LoadFromData(
+                "window { background-color: #18181A; padding: 0; margin: 0; }"
+            );
 
+            StyleContext.AddProviderForScreen(
+                Gdk.Screen.Default,
+                cssProvider,
+                StyleProviderPriority.Application
+            );
+        }
     }
 }
-
-
-    
-
