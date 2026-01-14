@@ -1,7 +1,9 @@
 ﻿using System;
 using Gtk;
 using Gdk;
+using SpotifyMiniPanel;
 using SpotifyMiniPanel.UI.Windows;
+using SpotifyMiniPanel.UI.Settings;
 
 class Program
 {
@@ -12,9 +14,15 @@ class Program
     {
         Application.Init();
 
+        // 🔹 Janela principal
         var win = new MainWindow();
         win.Resizable = false;
 
+        // 🔹 Carrega settings e aplica posição
+        SpotifyMiniPanel.Settings.LoadSettings();
+        PositionSettings.ApplyWindowPosition(win);
+
+        // 🔹 UI
         var imagemMusic = new ImagemMusic();
         var nameMusic = new NameMusic();
         var progressBar = new ProgressBar();
@@ -65,6 +73,7 @@ class Program
         musicArea.PackStart(centerButtons, false, false, 0);
         mainBox.PackStart(musicArea, false, false, 0);
 
+        // 🔹 Botão Settings
         settingsButton.Clicked += (s, e) =>
         {
             if (settingsWindow == null || !settingsWindow.IsVisible)
@@ -87,10 +96,12 @@ class Program
         win.Add(mainBox);
         win.ShowAll();
 
-        var screen = Display.Default.DefaultScreen;
-        win.Move(screen.Width - 410, screen.Height - 200);
+        win.DeleteEvent += (o, e) =>
+        {
+            SpotifyMiniPanel.Settings.SaveSettings();
+            Application.Quit();
+        };
 
-        win.DeleteEvent += (o, e) => Application.Quit();
         Application.Run();
     }
 }

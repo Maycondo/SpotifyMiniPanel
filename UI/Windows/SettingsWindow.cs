@@ -22,14 +22,18 @@ namespace SpotifyMiniPanel.UI.Windows
             var mainBox = new Box(Orientation.Vertical, 12);
             var label = new Label
             {
-                LabelProp = "Panel",
-                Halign = Align.Center,
-                MarginTop = 20,
-                MarginBottom = 20,
+                Text = "Panel",
+                UseMarkup = true,
+                LabelProp = "<b><span size='11000'>Panel</span></b>",
+                Halign = Gtk.Align.Start,
+                MarginTop = 8,  
+                MarginStart = 8
             };
+
+
             mainBox.PackStart(label, false, false, 0);
             var positionSettings = new PositionSettings();  
-            mainBox.Margin = 20;
+            mainBox.Margin = 10;
 
             mainBox.PackStart(positionSettings, false, false, 0);
 

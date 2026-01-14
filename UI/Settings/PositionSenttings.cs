@@ -1,4 +1,5 @@
 using Gtk;
+using Gdk;
 
 namespace SpotifyMiniPanel.UI.Settings
 {
@@ -11,7 +12,6 @@ namespace SpotifyMiniPanel.UI.Settings
             MarginStart = 12;
             MarginEnd = 12;
 
-            // Label esquerda
             var label = new Label
             {
                 LabelProp = "Posição da Janela:",
@@ -19,25 +19,75 @@ namespace SpotifyMiniPanel.UI.Settings
                 Hexpand = true
             };
 
-            // Combo estilo botão
             var combo = new ComboBoxText();
             combo.AppendText("Canto superior direito");
             combo.AppendText("Canto superior esquerdo");
             combo.AppendText("Canto inferior esquerdo");
             combo.AppendText("Canto inferior direito");
-            combo.Active = 0;
 
-            combo.Changed += (_, __) =>
+            // 🔹 Seleciona conforme setting salvo
+            combo.Active = SpotifyMiniPanel.Settings.WindowPosition switch
             {
-                System.Console.WriteLine(combo.ActiveText);
-                
+                "Canto superior direito" => 0,
+                "Canto superior esquerdo" => 1,
+                "Canto inferior esquerdo" => 2,
+                "Canto inferior direito" => 3,
+                _ => 3
             };
 
-            // Layout GTK3
-            PackStart(label, true, true, 0);   // expande à esquerda
-            PackStart(combo, false, false, 0); // fica à direita
+            combo.Changed += (sender, e) =>
+            {
+                var selected = combo.ActiveText;
+                if (selected == null) return;
+
+                SpotifyMiniPanel.Settings.WindowPosition = selected;
+                SpotifyMiniPanel.Settings.SaveSettings();
+
+                if (Toplevel is Gtk.Window toplevel)
+                    ApplyWindowPosition(toplevel);
+            };
+
+            PackStart(label, true, true, 0);
+            PackStart(combo, false, false, 0);
 
             ApplyCss();
+        }
+
+        public static void ApplyWindowPosition(Gtk.Window win)
+        {
+            var screen = Gdk.Screen.Default;
+
+            int monitor = screen.PrimaryMonitor;
+            var geo = screen.GetMonitorGeometry(monitor);
+
+            switch (SpotifyMiniPanel.Settings.WindowPosition)
+            {
+                case "Canto superior direito":
+                    win.Move(geo.X + geo.Width - 410, geo.Y);
+                    break;
+
+                case "Canto superior esquerdo":
+                    win.Move(geo.X, geo.Y);
+                    break;
+
+                case "Canto inferior esquerdo":
+                    win.Move(geo.X, geo.Y + geo.Height - 200);
+                    break;
+
+                case "Canto inferior direito":
+                    win.Move(
+                        geo.X + geo.Width - 410,
+                        geo.Y + geo.Height - 200
+                    );
+                    break;
+
+                default:
+                    win.Move(
+                        geo.X + geo.Width - 410,
+                        geo.Y + geo.Height - 200
+                    );
+                    break;
+            }
         }
 
         private void ApplyCss()
@@ -57,7 +107,7 @@ namespace SpotifyMiniPanel.UI.Settings
             ");
 
             StyleContext.AddProviderForScreen(
-                Gdk.Screen.Default,
+                Screen.Default,
                 css,
                 StyleProviderPriority.Application
             );
