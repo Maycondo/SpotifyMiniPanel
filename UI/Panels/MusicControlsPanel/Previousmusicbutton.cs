@@ -5,10 +5,10 @@ using Gdk;
 
 class PreviosMusicButton : Button
 {
-
+    //🔹Ícone do botão
     private Label iconLabel;
-    public string Icon { get; set; } = "\uf048"; // Unicode do ícone "previ a música"
-
+    public string Icon { get; set; } = "\uf048"; //🔹 Unicode do ícone "previ a música"
+    
     public PreviosMusicButton() : base()
     {
         iconLabel = new Label(Icon)
@@ -16,8 +16,8 @@ class PreviosMusicButton : Button
             Name = "previousMusicIcon",
             Text = Icon,
             UseMarkup = true,
-            Xalign = 0.5f, // Centraliza horizontalmente
-            Yalign = 0.5f // Centraliza verticalmente
+            Xalign = 0.5f, //🔹 Centraliza horizontalmente
+            Yalign = 0.5f //🔹 Centraliza verticalmente
         };
 
         Add(iconLabel);

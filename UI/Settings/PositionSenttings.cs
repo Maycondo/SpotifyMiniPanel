@@ -35,6 +35,7 @@ namespace SpotifyMiniPanel.UI.Settings
                 _ => 3
             };
 
+            // 🔹 Salva a seleção nas settings
             combo.Changed += (sender, e) =>
             {
                 var selected = combo.ActiveText;
@@ -42,7 +43,7 @@ namespace SpotifyMiniPanel.UI.Settings
 
                 SpotifyMiniPanel.Settings.WindowPosition = selected;
                 SpotifyMiniPanel.Settings.SaveSettings();
-
+                // 🔹 Aplica a nova posição imediatamente
                 if (Toplevel is Gtk.Window toplevel)
                     ApplyWindowPosition(toplevel);
             };
@@ -52,14 +53,16 @@ namespace SpotifyMiniPanel.UI.Settings
 
             ApplyCss();
         }
-
+         
+        // 🔹 Método para aplicar a posição da janela conforme a configuração salva
         public static void ApplyWindowPosition(Gtk.Window win)
         {
             var screen = Gdk.Screen.Default;
 
             int monitor = screen.PrimaryMonitor;
             var geo = screen.GetMonitorGeometry(monitor);
-
+            
+            // 🔹 Define a posição da janela com base na configuração salva
             switch (SpotifyMiniPanel.Settings.WindowPosition)
             {
                 case "Canto superior direito":
@@ -75,17 +78,11 @@ namespace SpotifyMiniPanel.UI.Settings
                     break;
 
                 case "Canto inferior direito":
-                    win.Move(
-                        geo.X + geo.Width - 410,
-                        geo.Y + geo.Height - 200
-                    );
+                    win.Move( geo.X + geo.Width - 410, geo.Y + geo.Height - 200);
                     break;
 
                 default:
-                    win.Move(
-                        geo.X + geo.Width - 410,
-                        geo.Y + geo.Height - 200
-                    );
+                    win.Move(geo.X + geo.Width - 410, geo.Y + geo.Height - 200);
                     break;
             }
         }

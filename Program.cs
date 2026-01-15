@@ -96,6 +96,7 @@ class Program
         win.Add(mainBox);
         win.ShowAll();
 
+        // 🔹 Salva settings ao fechar
         win.DeleteEvent += (o, e) =>
         {
             SpotifyMiniPanel.Settings.SaveSettings();

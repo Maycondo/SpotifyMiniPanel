@@ -6,10 +6,10 @@ using Gdk;
 class PlayAndPauseButton : Button
 {
     private Label iconLabel;
-    public string PlayIcon = "\uf04b"; // Unicode do ícone "play"
-    public string PauseIcon = "\uf04c"; // Unicode do ícone "pause"
+    public string PlayIcon = "\uf04b"; //🔹 Unicode do ícone "play"
+    public string PauseIcon = "\uf04c"; //🔹 Unicode do ícone "pause"
 
-    public bool IsPlaying { get; private set; } = false; // Estado do botão
+    public bool IsPlaying { get; private set; } = false; //🔹 Estado do botão
 
     public PlayAndPauseButton()
     {
@@ -21,7 +21,7 @@ class PlayAndPauseButton : Button
             Xalign = 0.5f, // Centraliza horizontalmente
             Yalign = 0.6f // Centraliza verticalmente
         };
-        iconLabel.UseUnderline = false; // Permite o uso de sublinhado para ícones
+        iconLabel.UseUnderline = false; //🔹 Permite o uso de sublinhado para ícones
 
         Add(iconLabel);
 

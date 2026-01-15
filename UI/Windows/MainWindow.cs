@@ -4,8 +4,10 @@ namespace SpotifyMiniPanel.UI.Windows
 {
     public class MainWindow : Window
     {
+        // 🔹 Construto r
         public MainWindow() : base("Spotify Mini Panel")
         {
+            // 🔹 Configurações básicas da janela
             SetDefaultSize(400, 160);
             KeepAbove = true;
             Decorated = true;
@@ -13,7 +15,7 @@ namespace SpotifyMiniPanel.UI.Windows
             WindowPosition = WindowPosition.Center;
             Resizable = false;
 
-            // ✅ DECLARAÇÃO CORRETA
+            // 🔹 Aplica CSS para o estilo da janela
             var cssProvider = new CssProvider();
             cssProvider.LoadFromData(
                 "window { background-color: #18181A; padding: 0; margin: 0; }"

@@ -9,16 +9,17 @@ namespace SpotifyMiniPanel.UI.Windows
     {
         private MainWindow mainWindow;
 
-        // ✅ CONSTRUTOR (tem que estar AQUI dentro da classe)
+        // 🔹 Construtor
         public SettingsWindow(MainWindow mainWindow) : base("Settings")
         {
+            // 🔹 Referência para a janela principal
             this.mainWindow = mainWindow;
 
             SetDefaultSize(600, 700);
             SetPosition(WindowPosition.Center);
             Resizable = false;
 
-            // Container principal
+            // 🔹 Layout principal
             var mainBox = new Box(Orientation.Vertical, 12);
             var label = new Label
             {
@@ -30,7 +31,7 @@ namespace SpotifyMiniPanel.UI.Windows
                 MarginStart = 8
             };
 
-
+            // 🔹 Adiciona seção de posição da janela
             mainBox.PackStart(label, false, false, 0);
             var positionSettings = new PositionSettings();  
             mainBox.Margin = 10;

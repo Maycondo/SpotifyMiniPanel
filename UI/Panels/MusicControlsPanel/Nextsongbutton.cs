@@ -5,8 +5,9 @@ using Gdk;
 
 class NextSongButton : Button
 {
+    //🔹 Icone botao
     private Label iconLabel;
-    public string Icon { get; set; } = "\uf051"; // Unicode do ícone "next"
+    public string Icon { get; set; } = "\uf051"; //🔹 Unicode do ícone "next"
     public NextSongButton() : base()
     {
 
@@ -15,18 +16,18 @@ class NextSongButton : Button
             Name = "nextSongIcon",
             Text = Icon,
             UseMarkup = true,
-            Xalign = 0.5f, // Centraliza horizontalmente
-            Yalign = 0.5f // Centraliza verticalmente
+            Xalign = 0.5f, //🔹 Centraliza horizontalmente
+            Yalign = 0.5f //🔹 Centraliza verticalmente
         };
 
         Add(iconLabel);
 
-        // Configurações do botão
+        //🔹 Configurações do botão
         SetSizeRequest(30, 30);
         CanFocus = false;
         Relief = ReliefStyle.None;
 
-        // Estilo do botão 
+        //🔹 Estilo do botão 
         var cssProvider = new CssProvider();
         cssProvider.LoadFromData(@"
             #nextSongIcon {

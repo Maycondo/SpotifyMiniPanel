@@ -4,8 +4,10 @@ public class NameMusic : Box
 {
     private Label labelMusic;
 
+    // 🔹 Constructor
     public NameMusic() : base(Orientation.Vertical, 0)
     {
+        //🔹 Label for Music Name
         labelMusic = new Label("Nome da Música");
         labelMusic.Name = "customLabel";
         labelMusic.Xalign = 0;

@@ -1,12 +1,15 @@
 using Gtk;
 
 public class ImagemMusic : Box
-{
+{    
+    // 🔹 Construtor
     public ImagemMusic() : base(Orientation.Vertical, 0)
     {
+        // 🔹 Caixa com borda arredondada para a imagem
         var eventBox = new EventBox();
         eventBox.Name = "musicFrame";
 
+        // 🔹 Imagem de exemplo (substitua pelo carregamento dinâmico conforme a música)
         var image = new Image("caminho/para/imagem.png");
         image.SetSizeRequest(70, 70);
 
