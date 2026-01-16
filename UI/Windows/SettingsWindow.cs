@@ -5,18 +5,18 @@ using SpotifyMiniPanel.UI.Settings;
 
 namespace SpotifyMiniPanel.UI.Windows
 {
-    public class SettingsWindow : Window
+    public class SettingsWindow : Gtk.Window
     {
-        private MainWindow mainWindow;
+        private Gtk.Window _mainWindow;
+
 
         // 🔹 Construtor
-        public SettingsWindow(MainWindow mainWindow) : base("Settings")
+        public SettingsWindow(Gtk.Window mainWindow) : base("Settings")
         {
             // 🔹 Referência para a janela principal
-            this.mainWindow = mainWindow;
+            _mainWindow = mainWindow;
 
             SetDefaultSize(600, 700);
-            SetPosition(WindowPosition.Center);
             Resizable = false;
 
             // 🔹 Layout principal
@@ -33,10 +33,10 @@ namespace SpotifyMiniPanel.UI.Windows
 
             // 🔹 Adiciona seção de posição da janela
             mainBox.PackStart(label, false, false, 0);
-            var positionSettings = new PositionSettings();  
             mainBox.Margin = 10;
 
-            mainBox.PackStart(positionSettings, false, false, 0);
+            mainBox.PackStart(new PositionSettings(_mainWindow), false, false, 0);
+
 
             Add(mainBox);
             ShowAll();

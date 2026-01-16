@@ -9,10 +9,13 @@ namespace SpotifyMiniPanel.UI.Windows
         {
             // 🔹 Configurações básicas da janela
             SetDefaultSize(400, 160);
+
+            // 🔹 Define a posição da janela como None para permitir controle manual
+            SetPosition(WindowPosition.None);
+
             KeepAbove = true;
             Decorated = true;
             IconName = "spotify";
-            WindowPosition = WindowPosition.Center;
             Resizable = false;
 
             // 🔹 Aplica CSS para o estilo da janela
